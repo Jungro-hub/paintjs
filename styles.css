@@ -1,0 +1,81 @@
+@import "reset.css";
+@import "range.css";
+
+body {
+  background-color: #f6f9fc;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.canvas {
+  width: 900px;
+  height: 600px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.controls {
+  width: 800px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.controls__range {
+  margin-bottom: 30px;
+}
+.controls__range input {
+  width: 400px;
+}
+
+.controls__btns {
+  margin-bottom: 40px;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.controls__btns button {
+  all: unset;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 0;
+  width: 120px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border: 2px soild rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+.controls__btns button:active {
+  transform: scale(0.97);
+}
+.controls__btns button:hover {
+  color: white;
+  background-color: #2f90ff;
+}
+.controls__colors {
+  width: 550px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.controls__color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.1s ease;
+}
+
+.controls__color:hover {
+  transform: scale(1.3);
+}

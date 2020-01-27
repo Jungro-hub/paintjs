@@ -1,0 +1,41 @@
+input[type="range"] {
+  width: 100%;
+  height: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
+  -webkit-appearance: none; /*remove the line*/
+  outline: none;
+  /*background-color:cyan;*/
+  border: 0; /*for firefox on android*/
+  padding: 0 8px; /*for IE*/
+  margin: 8px 0;
+  background-color: #f6f9fc;
+}
+
+/*chrome and opera*/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #ccc; /*trackColor*/
+  height: 4px; /*trackHeight*/
+  border-radius: 4px; /*trackHeight*/
+  transition: 0.3s;
+}
+
+input[type="range"]:hover::-webkit-slider-runnable-track,
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #aaa; /*activeTrackColor*/
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #7cb7fb; /*thumbColor*/
+  width: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
+  height: 28px; /* thumbHeight + (2 x thumbBorderWidth)*/
+  border-radius: 50%;
+  margin-top: -12px; /* -[thumbHeight + (2 x thumbBorderWidth) - trackHeight]/2*/
+  cursor: pointer;
+  border: 4px solid #fff; /*border-width should be equal to thumbBorderWidth if you want same border width across all browsers and border-color should match the background*/
+  transition: 0.3s;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: #0579ff; /*activeThumbColor*/
+}
